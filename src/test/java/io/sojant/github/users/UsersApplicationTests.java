@@ -24,10 +24,10 @@ public class UsersApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void exampleTest() throws Exception {
-		this.mvc.perform(get("/greeting?name=Jose")).andExpect(status().isOk())
-				.andExpect(content().string("{\"id\":1,\"content\":\"Howdy, Jose!\"}"));
-	}
+//	@Test
+//	public void exampleTest() throws Exception {
+//		this.mvc.perform(get("/greeting?name=Jose")).andExpect(status().isOk())
+//				.andExpect(content().string("{\"id\":1,\"content\":\"Howdy, Jose!\"}"));
+//	}
 
 }

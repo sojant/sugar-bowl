@@ -31,8 +31,16 @@ configurations {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-data-rest')
 	implementation('org.springframework.boot:spring-boot-starter-web')
-	runtimeOnly('org.postgresql:postgresql')
+	implementation('org.hibernate:hibernate-core:5.2.12.Final')
+	implementation('org.springframework:spring-orm:5.0.2.RELEASE')
+	implementation('org.apache.tomcat:tomcat-dbcp:9.0.1')
+    implementation('org.postgresql:postgresql')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	testImplementation('org.springframework.restdocs:spring-restdocs-mockmvc')
+}
+
+task executeCreateModels(type:JavaExec) {
+    main = 'io.sojant.github.users.tasks.CreateModels'
+    classpath = sourceSets.main.runtimeClasspath
 }

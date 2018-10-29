@@ -1,15 +1,32 @@
 package io.sojant.github.users.model;
 
+import javax.persistence.*;
+import java.io.Serializable;
+
+
 /**
  * Created by Sojant on 2018-10-24.
  */
-public class User {
+@Entity
+@Table
+public class Users implements Serializable{
 
+    @Id
+    @GeneratedValue
+    @Column
+    private Long id;
+
+    @Column
     private String firstName;
-    private String lastName;
-    private String email;
-    private String note;
 
+    @Column
+    private String lastName;
+
+    @Column
+    private String email;
+
+    @Column
+    private String note;
 
     public String getFirstName() {
         return firstName;
@@ -41,5 +58,13 @@ public class User {
 
     public void setNote(String note) {
         this.note = note;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

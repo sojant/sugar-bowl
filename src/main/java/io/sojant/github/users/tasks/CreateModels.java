@@ -45,8 +45,7 @@ public class CreateModels {
         schemaExport.setOutputFile("db-schema.sql");
         schemaExport.execute( EnumSet.of(
                 TargetType.DATABASE,
-                TargetType.SCRIPT,
-                TargetType.STDOUT) , SchemaExport.Action.BOTH, metadata.buildMetadata());
+                TargetType.SCRIPT) , SchemaExport.Action.BOTH, metadata.buildMetadata());
 
         ((StandardServiceRegistryImpl) registry).destroy();
 

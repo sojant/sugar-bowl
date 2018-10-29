@@ -17,12 +17,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class UsersApplicationTests {
 
+	@Autowired
+	private MockMvc mvc;
+
 	@Test
 	public void contextLoads() {
 	}
-
-	@Autowired
-	private MockMvc mvc;
 
 	@Test
 	public void exampleTest() throws Exception {
